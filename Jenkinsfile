@@ -9,7 +9,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE = winterzone2/bitcoin-site
+        DOCKER_IMAGE = 'winterzone2/bitcoin-site'
     }
 
     stages {
