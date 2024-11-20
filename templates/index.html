@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Info Hub</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff9900;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        h1 {
+            color: #ff9900;
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-top: 20px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+    <script>
+        // JavaScript to handle section navigation
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Initialize the home section on load
+        window.onload = () => {
+            showSection('home');
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a onclick="showSection('home')">Home</a>
+            <a onclick="showSection('about')">About Bitcoin</a>
+            <a onclick="showSection('creator')">Bitcoin's Creator</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Section -->
+        <div id="home" class="section active">
+            <h1>Welcome to the Bitcoin Info Hub</h1>
+            <p>Discover the fascinating world of Bitcoin: how it works, its creator, and its history.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Bitcoin.svg" alt="Bitcoin logo" class="logo">
+        </div>
+
+        <!-- About Bitcoin Section -->
+        <div id="about" class="section">
+            <h1>About Bitcoin</h1>
+            <p>Bitcoin is a decentralized digital currency without a central bank or single administrator. It can be sent from user to user on the peer-to-peer Bitcoin network without the need for intermediaries.</p>
+            <p>Bitcoin was invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto. The currency began use in 2009 when its implementation was released as open-source software.</p>
+        </div>
+
+        <!-- Bitcoin's Creator Section -->
+        <div id="creator" class="section">
+            <h1>About Bitcoin's Creator</h1>
+            <p>The mysterious Satoshi Nakamoto is credited with creating Bitcoin. Despite numerous investigations, the true identity of Nakamoto remains unknown to this day.</p>
+            <p>What we know is that Nakamoto published the Bitcoin whitepaper in 2008 and was active in the Bitcoin community until 2010, after which they disappeared, leaving Bitcoin in the hands of its users.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bitcoin Info Hub</p>
+    </footer>
+</body>
+</html>
